@@ -1,0 +1,394 @@
+@use "./src/styles/base";
+@use "./src/styles/pages";
+
+@use "./src/styles/abstracts/mixins" as mix;
+
+header,
+main {
+  display: none;
+}
+header {
+  @include mix.flexbox($justify: space-between, $items: center);
+  @include mix.paddingX(1.25rem);
+  @include mix.paddingY(1.25rem);
+  @include mix.inline-size(100%);
+  border-top: 1px solid #000;
+  border-bottom: 2px solid #000;
+
+  ul {
+    @include mix.flexbox($justify: space-between, $items: center, $gap: 1.25rem);
+  }
+}
+
+.portfolio__about {
+  @include mix.flexbox($justify: center, $gap: 2.5rem, $items: center);
+  @include mix.paddingY(3.125rem);
+
+  margin: 0 auto;
+
+  img {
+    width: 450px;
+  }
+
+  &__dscr {
+    @include mix.flexbox($direction: column);
+    font-size: 1rem;
+
+    b {
+      font-size: 2rem;
+      line-height: 1.4;
+    }
+
+    p {
+      @include mix.paddingY(1rem);
+      line-height: 1.6;
+    }
+  }
+}
+
+.portfolio__career {
+  @include mix.paddingY(3.125rem);
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+
+  h2 {
+    width: 80%;
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin: 2.5rem auto;
+    color: #2e2e2e;
+  }
+  dl {
+    @include mix.paddingY(1.25rem);
+    @include mix.flexbox($gap: 2.5rem);
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.4;
+    border-bottom: 1px solid #ddd;
+
+    dt {
+      width: 20%;
+      font-size: 1.125rem;
+      font-weight: 500;
+
+      span {
+        display: block;
+      }
+    }
+    dd > b {
+      display: block;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}
+
+.portfolio__project {
+  @include mix.paddingY(3.125rem);
+  width: 80%;
+  margin: 0 auto;
+
+  h2 {
+    width: 100%;
+    font-size: 1.875rem;
+    font-weight: 600;
+    position: relative;
+    margin: 2.5rem auto;
+    color: #2e2e2e;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 110px;
+      width: calc(100% - 110px);
+      height: 2px;
+      background-color: #000;
+    }
+  }
+
+  &__karly {
+    @include mix.margin-block-end(7.5rem);
+    .karly__intro {
+      @include mix.flexbox($justify: center, $gap: 2.5rem, $items: center);
+
+      img {
+        @include mix.inline-size(40%);
+      }
+    }
+
+    .karly__detail {
+      @include mix.marginY(2.5rem);
+      position: relative;
+
+      img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 1px 2px 3px 0 #9a9a9a;
+        border-radius: 0.625rem;
+      }
+      &:before {
+        content: "";
+        width: 1148px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 26px;
+        z-index: 1;
+        background-color: #fff;
+        border-radius: 0.625rem;
+      }
+
+      &--text {
+        @include mix.marginY(1.25rem);
+        @include mix.padding-block-start(1.25rem);
+        @include mix.flexbox($justify: space-between, $gap: 1.25rem);
+        border-top: 1px solid #ddd;
+        line-height: 1.5;
+        letter-spacing: -0.3px;
+      }
+    }
+  }
+  .portfolio__intro {
+    @include mix.flexbox($direction: column, $justify: space-around);
+
+    p {
+      line-height: 1.5;
+      font-size: 1.125rem;
+      letter-spacing: -0.3px;
+    }
+    ul {
+      @include mix.flexbox($justify: flex-start, $wrap: wrap, $gap: 0.625rem, $items: center);
+
+      li {
+        @include mix.paddingX(0.625rem);
+        @include mix.paddingY(0.25rem);
+        font-size: 14px;
+        border-radius: 4px;
+        font-weight: 400;
+        color: #fff;
+      }
+      .html5 {
+        background-color: #e44d26;
+      }
+      .sass {
+        background-color: #cd679a;
+      }
+      .js {
+        background-color: #f7df1e;
+        color: #000;
+      }
+      .pocketbase {
+        background-color: #a9a9a9;
+      }
+      .pockethost {
+        background: linear-gradient(#08379c, #f11f5a);
+      }
+      .vite {
+        background: linear-gradient(#4ec1ff, #8e70fe);
+      }
+      .git {
+        background-color: #f05133;
+      }
+      .github {
+        background-color: #fff;
+        border: 1px solid #000;
+        color: #000;
+      }
+      .netlify {
+        background: linear-gradient(#26c0b8, #479fbe);
+      }
+    }
+    &__desc {
+      @include mix.flexbox($justify: space-between, $items: flex-end);
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: inline;
+      }
+      a {
+        @include mix.padding-inline-start(1rem);
+        text-align: right;
+        font-weight: 500;
+        text-decoration: underline;
+
+        &:hover {
+          color: #f44336;
+        }
+      }
+    }
+  }
+  &__toy {
+    @include mix.flexbox($gap: 2.5rem);
+  }
+
+  .portfolio__contact {
+    background-color: #08379c;
+  }
+}
+
+/* 데스크탑 스타일 */
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .portfolio__about {
+    @include mix.flexbox($direction: column);
+    img {
+      width: 360px;
+    }
+  }
+
+  .portfolio__career {
+    h2 {
+      width: 80%;
+    }
+    dl {
+      @include mix.flexbox($direction: column, $gap: 1.25rem);
+
+      dt {
+        width: 100%;
+
+        span {
+          display: inline;
+        }
+      }
+      dd {
+        margin: 0;
+      }
+    }
+  }
+
+  .portfolio__project {
+    .portfolio__project__karly {
+      .karly__intro {
+        @include mix.flexbox($direction: column);
+
+        img {
+          width: 60%;
+        }
+      }
+    }
+    .toy__project {
+      @include mix.flexbox($direction: column);
+
+      .jujeob {
+        @include mix.inline-size(100%);
+      }
+      .jujeob__desc {
+        @include mix.inline-size(100%);
+      }
+    }
+    .portfolio__intro {
+      @include mix.flexbox($direction: column, $justify: space-around);
+      @include mix.block-size(100%);
+      width: 100%;
+
+      .portfolio__intro__desc {
+        @include mix.flexbox($direction: column, $items: flex-start, $gap: 1rem);
+
+        a {
+          text-align: left;
+          padding: 0;
+        }
+      }
+
+      p {
+        @include mix.margin-block-start(1rem);
+        font-size: 15px;
+      }
+
+      ul {
+        @include mix.marginY(1rem);
+        @include mix.flexbox($wrap: wrap);
+      }
+    }
+  }
+}
+
+/* 모바일 스타일*/
+@media screen and (max-width: 768px) {
+  header {
+    @include mix.flexbox($direction: column, $gap: 1rem);
+  }
+  .portfolio__about {
+    @include mix.flexbox($direction: column);
+    @include mix.inline-size(76%);
+
+    img {
+      width: 360px;
+    }
+    b {
+      font-size: 1.25rem;
+    }
+  }
+
+  .portfolio__career {
+    dl {
+      @include mix.flexbox($direction: column, $gap: 1.25rem);
+
+      dt {
+        width: 100%;
+        font-size: 1rem;
+
+        span {
+          display: inline;
+        }
+      }
+      dd {
+        margin: 0;
+      }
+    }
+  }
+
+  .portfolio__project {
+    .portfolio__project__karly {
+      .karly__intro {
+        @include mix.flexbox($direction: column);
+
+        img {
+          width: 80%;
+        }
+      }
+      .karly__detail--text {
+        @include mix.flexbox($direction: column);
+      }
+    }
+    .toy__project {
+      @include mix.flexbox($direction: column);
+
+      .jujeob {
+        @include mix.inline-size(100%);
+      }
+      .jujeob__desc {
+        @include mix.inline-size(100%);
+      }
+    }
+    .portfolio__intro {
+      @include mix.flexbox($direction: column, $justify: space-around);
+      @include mix.block-size(100%);
+      width: 100%;
+
+      .portfolio__intro__desc {
+        @include mix.flexbox($direction: column, $items: flex-start, $gap: 1rem);
+
+        a {
+          text-align: left;
+          padding: 0;
+        }
+      }
+
+      p {
+        @include mix.margin-block-start(1rem);
+        font-size: 15px;
+      }
+
+      ul {
+        @include mix.marginY(1rem);
+        @include mix.flexbox($wrap: wrap);
+      }
+    }
+  }
+}

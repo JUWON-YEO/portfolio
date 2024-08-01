@@ -3,22 +3,213 @@
   <head>
     <title>여주원 포트폴리오</title>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
     <header>
-       <h1><a href="/">사용자의 경험을 디자인하는 <b>웹 퍼블리셔</b></a></h1>
-        <ul>
-          <li>About Me</li>
-          <li>Career</li>
-          <li>Project</li>
-          <li>Contact</li>
-        </ul>
-      </header>
-      <section>
-         
+      <h1>
+        <a href="/">사용자의 경험을 디자인하는 <b>웹 퍼블리셔</b></a>
+      </h1>
+      <ul>
+        <li>About Me</li>
+        <li>Career</li>
+        <li>Project</li>
+        <li>Contact</li>
+      </ul>
+    </header>
+    <main>
+      <section class="portfolio__about">
+        <img srcset="/main_img_1x.webp 1x, /main_img_2x.webp 2x" src="/main_img_1x.webp" alt="여주원" />
+        <div class="portfolio__about__dscr">
+          <b>
+            안녕하세요👋 <br />
+            사용자의 경험을 설계하는 프론트엔드 개발자, <br />
+            여주원입니다
+          </b>
+          <p>
+            코드 한줄한줄에 희열과 성취감을 느끼며 개발합니다. <br />
+            웹 퍼블리셔에서 이젠 프론트엔드 개발자로 성장중입니다.<br /><br />
+
+            웹 표준을 준수하며, 모든 사람들이 동일한 환경에서 접근할 수 있도록 <br />
+            웹 접근성을 생각하는 코드를 작성합니다.<br /><br />
+
+            사용자 중심의 UI디자인과 사용자 경험 중심의 UX 개발까지 생각하는 개발자입니다.<br /><br />
+
+            좋아하는 일을 더 즐겁게 일 할 준비가 되어있습니다.
+          </p>
+        </div>
       </section>
+      <section class="portfolio__career">
+        <h2>Career</h2>
+        <dl>
+          <dt>(주) 윕스 / 인프라개발부 <span>2021.06 ~ 2022.12</span></dt>
+          <dd>
+            <b>[운영서비스 업데이트]</b>
+            - 최신 정보와 트렌드에 맞게 웹사이트 콘텐츠를 주기적으로 업데이트하고 유지보수했습니다.
+            <b>[에러 수정 및 디버깅]</b>
+            - 웹사이트 내 발생하는 콘텐츠 관련 오류를 신속하게 수정하고 디버깅 작업을 수행했습니다.
+            <b>[팀 협업 및 커뮤니케이션]</b>
+            - 디자이너, 개발자, 마케팅 팀과 협력하여 프로젝트 목표를 달성했습니다.
+          </dd>
+        </dl>
+        <dl>
+          <dt>가연결혼정보 / 온라인사업부<span>2019. 12 ~ 2021. 02</span></dt>
+          <dd>
+            <b>[운영서비스 유지보수 및 정기 리뉴얼 작업 참여 / pc&mobile ]</b>
+            - 디자인 시안 100% 구현 <br />
+            - 기존 개발 로직 유지 <br />
+            - javascript 오픈 소스를 이용한 이벤트 구현 <br />
+            <br />
+            <b>[이벤트 페이지 및 랜딩페이지 신규 개발 작업 참여 / pc&mobile ]</b>
+            - 디자인 시안 100% 구현. - 기존 개발 로직 유지
+          </dd>
+        </dl>
+        <dl>
+          <dt>잠자리컴퍼니 / 디자인 팀 <span>2017.06 ~ 2019. 04</span></dt>
+          <dd>
+            - 웹 사이트 디자인, 퍼블리싱 [100% 작업] <br />
+            - SEO 최적화 작업<br />
+            - 오픈소스 활용한 화면 이벤트 구현<br />
+            - 그누보드 활용한 게시판 연동 작업<br />
+            - 그 외 기타 Editorial design<br />
+            - 디자이너, 개발자, 마케팅 팀과 협력하여 프로젝트 목표를 달성했습니다.
+          </dd>
+        </dl>
+      </section>
+      <section class="portfolio__project">
+        <h2>Project</h2>
+        <div class="portfolio__project__karly">
+          <div class="karly__intro">
+            <img srcset="/karly_1x.webp 1x, /karly_2x.webp 2x" src="/karly_1x.webp" alt="마켓칼리 로고" loading="lazy" />
+            <div class="portfolio__intro">
+              <div class="portfolio__intro__desc">
+                <h3>마켓컬리 클론코딩 프로젝트 (적응형)</h3>
+                <span>
+                  <a href="https://github.com/FRONTENDSCHOOL10/AjangAjang" target="_blank" rel="noopener noreferrer">[GitHub]</a>
+                  <a href="https://ajangkarly.netlify.app/" target="_blank" rel="noopener noreferrer">[배포사이트]</a>
+                </span>
+              </div>
+              <p>상품 디테일 페이지, 상품 문의, 상품 리뷰, 장바구니 / 담당파트 100% 기여</p>
+              <p>
+                식품 이커머스 기업으로 대표적인 마켓컬리를 클론 코딩한 웹 사이트 입니다. <br />
+                적응형 페이지로 구성된 마켓컬리를 4명이 파트를 분담하여 약 2주동안 프로젝트를 진행하였습니다.<br />
+                프로젝트 목표 및 관리, 규칙부터 트러블슈팅 그리고 배포 및 발표까지 참여했습니다.<br />
+              </p>
+              <ul>
+                <li class="html5">HTML5</li>
+                <li class="sass">SASS</li>
+                <li class="js">JavaScript</li>
+                <li class="pocketbase">PocketBase</li>
+                <li class="pockethost">PocketHost</li>
+                <li class="vite">VITE</li>
+                <li class="git">git</li>
+                <li class="github">GitHub</li>
+                <li class="netlify">netlify</li>
+              </ul>
+            </div>
+          </div>
+          <div class="karly__detail">
+            <img src="/karly.gif" alt="칼리 시연" loading="lazy" />
+            <div class="karly__detail--text">
+              <p>REST API를 사용하여 직접 CURD 코드를 작성하고 실제 데이터 렌더링까지 작업하면서 데이터 구조를 잘 이해해야만 렌더링 작업도 이해한 만큼 이루어 질 수 있다는걸 확인했습니다.</p>
+              <p>바닐라JS로만 이루어진 마켓컬리 프로젝트에서 상당한 불편함을 겪었습니다. 바닐라 자바스크립트로만 코드를 작성해야하기 때문에 함수하나를 작성하는데도 꽤 시간을 소비하였습니다. 하지만 자바스크립트의 코어를 제대로 이해하고있어야 다른 곳에서도 잘 이해하고 활용할 수 있다고 생각합니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio__project__toy">
+          <div class="toy__project">
+            <div class="jujeob">
+              <div class="alert alert-error">제대로된 이름을 입력해주세요 !</div>
+              <div class="alert alert-success">클립보드에 복사 되었습니다 !</div>
+
+              <div class="container">
+                <b>🤣 주접 생성기</b>
+                <p>주접 생성기를 통해 사랑을 전하세요</p>
+
+                <form>
+                  <label for="nameField">이름을 적어주세요 <span class="icon">👇</span></label>
+                  <input type="text" id="nameField" placeholder="이름을 작성해주세요" value="" />
+                  <input type="submit" value="주접 떨기" id="submit" />
+                  <div class="result">이름 작성 후 주접 떨기 버튼을 눌러주세요.</div>
+                  <span class="notice"> 👆 클릭시 클립보드에 복사됩니다! 👆</span>
+                </form>
+              </div>
+            </div>
+            <div class="portfolio__intro jujeob__desc">
+              <div class="portfolio__intro__desc">
+                <h3>토이프로젝트 - 주접 생성기</h3>
+                <span>
+                  <a href="https://github.com/JUWON-YEO/core-js/tree/04.jujeob" target="_blank" rel="noopener noreferrer">[GitHub]</a>
+                </span>
+              </div>
+              <p>온라인에서 인기있는 주접생성기를 모티브로 JavaScript로 간단한 주접생성기를 구현했습니다.</p>
+              <p>이름을 입력하면 저장된 데이터롤 이용해 주접을 랜덤으로 생성합니다. 공백과 숫자로 입력 할 경우는 에러 메세지를 보여줍니다. 버튼을 입력 후 출력던 주접을 클릭하면 클립보드로 복사가 기능합니다.</p>
+            </div>
+          </div>
+          <div class="toy__project">
+            <div id="RecordCouter" class="randomDice RecordDice">
+              <h3 class="logo">
+                <img src="./dice_logo.png" alt="레코드 카운터" height="200" />
+                <div class="star right-star">
+                  <img src="./star.png" alt="반짝이별" />
+                </div>
+                <div class="star left-star">
+                  <img src="./star.png" alt="반짝이별" />
+                </div>
+              </h3>
+              <div class="bg"></div>
+              <div id="diceContainer">
+                <div id="cube">
+                  <div class="top"></div>
+                  <div class="front"></div>
+                  <div class="left"></div>
+                  <div class="back"></div>
+                  <div class="right"></div>
+                  <div class="bottom"></div>
+                </div>
+              </div>
+              <div class="buttonGroup">
+                <button type="button">
+                  주사위 <br />
+                  굴리기
+                </button>
+                <button type="button" disabled>기록</button>
+                <button type="button" disabled>초기화</button>
+              </div>
+              <div class="recordListWrapper" hidden>
+                <table class="recordList">
+                  <caption>
+                    레코드 리스트
+                  </caption>
+                  <div class="line"></div>
+                  <thead>
+                    <tr>
+                      <th scope="col">회차</th>
+                      <th scope="col">기록</th>
+                      <th scope="col">합계</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="portfolio__intro dice__desc">
+              <div class="portfolio__intro__desc">
+                <h3>토이프로젝트 - 랜덤 다이스</h3>
+                <span>
+                  <a href="https://github.com/JUWON-YEO/core-js/tree/05.randomDice" target="_blank" rel="noopener noreferrer">[GitHub]</a>
+                </span>
+              </div>
+              <p>랜덤으로 주사위를</p>
+              <p>이름을 입력하면 저장된 데이터롤 이용해 주접을 랜덤으로 생성합니다. 공백과 숫자로 입력 할 경우는 에러 메세지를 보여줍니다. 버튼을 입력 후 출력던 주접을 클릭하면 클립보드로 복사가 기능합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio__contact"></section>
+    </main>
   </body>
 </html>
