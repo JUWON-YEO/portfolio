@@ -30,7 +30,7 @@
 
     label {
       display: block;
-      margin: 2rem auto 1rem auto;
+      margin: 3rem auto 2rem auto;
     }
     input[type="text"] {
       font-size: 1rem;
@@ -52,7 +52,7 @@
 
     .result {
       max-width: 60%;
-      margin: 1.875rem auto;
+      margin: 3rem auto;
       padding: 1.3rem;
       font-size: 1.3rem;
       background: #e14949;
@@ -68,6 +68,11 @@
 
     .result:hover {
       background: rgb(77, 77, 77);
+    }
+
+    .notice{
+      display: block;
+      margin: 3rem auto 1rem auto;
     }
 
     .alert {

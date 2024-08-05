@@ -114,7 +114,7 @@ header {
   &__karly {
     @include mix.margin-block-end(7.5rem);
     .karly__intro {
-      @include mix.flexbox($justify: center, $gap: 2.5rem, $items: center);
+      @include mix.flexbox($justify: center, $gap: 2.5rem,  $items:flex-start);
 
       img {
         @include mix.inline-size(40%);
@@ -155,7 +155,7 @@ header {
     }
   }
   .portfolio__intro {
-    @include mix.flexbox($direction: column, $justify: space-around);
+    @include mix.flexbox($direction: column, $justify: space-around, $gap:1rem);
 
     p {
       line-height: 1.5;
@@ -205,14 +205,14 @@ header {
       }
     }
     &__desc {
-      @include mix.flexbox($justify: space-between, $items: flex-end);
+      @include mix.flexbox($wrap:wrap, $justify: space-between, $items: flex-end);
       h3 {
         font-size: 1.5rem;
         font-weight: 500;
         display: inline;
       }
       a {
-        @include mix.padding-inline-start(1rem);
+        
         text-align: right;
         font-weight: 500;
         text-decoration: underline;
@@ -225,6 +225,12 @@ header {
   }
   &__toy {
     @include mix.flexbox($gap: 2.5rem);
+
+
+    .jujeob,
+    .randomDice{
+      min-height: 600px;
+    }
   }
 
   .portfolio__contact {
