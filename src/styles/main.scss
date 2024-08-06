@@ -3,10 +3,6 @@
 
 @use "./src/styles/abstracts/mixins" as mix;
 
-header,
-main {
-  display: none;
-}
 header {
   @include mix.flexbox($justify: space-between, $items: center);
   @include mix.paddingX(1.25rem);
@@ -20,8 +16,10 @@ header {
   }
 }
 
+// 자기소개 영역
 .portfolio__about {
-  @include mix.flexbox($justify: center, $gap: 2.5rem, $items: center);
+  @include mix.inline-size(60%);
+  @include mix.flexbox($gap: 3rem, $items: center);
   @include mix.paddingY(3.125rem);
 
   margin: 0 auto;
@@ -46,49 +44,56 @@ header {
   }
 }
 
+// 커리어 영역
 .portfolio__career {
   @include mix.paddingY(3.125rem);
   width: 100%;
   margin: 0 auto;
   background-color: #f1f1f1;
 
-  h2 {
-    width: 80%;
-    font-size: 1.875rem;
-    font-weight: 600;
-    margin: 2.5rem auto;
-    color: #2e2e2e;
-  }
-  dl {
-    @include mix.paddingY(1.25rem);
-    @include mix.flexbox($gap: 2.5rem);
-    width: 80%;
+  &__container {
+    @include mix.inline-size(60%);
     margin: 0 auto;
-    line-height: 1.4;
-    border-bottom: 1px solid #ddd;
 
-    dt {
-      width: 20%;
-      font-size: 1.125rem;
-      font-weight: 500;
+    h2 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      margin: 2.5rem 0;
+      color: #2e2e2e;
+    }
+    dl {
+      @include mix.paddingY(1.25rem);
+      @include mix.flexbox($gap: 2.5rem);
 
-      span {
+      margin: 0 auto;
+      line-height: 1.4;
+      border-bottom: 1px solid #ddd;
+
+      dt {
+        width: 20%;
+        font-size: 1.125rem;
+        font-weight: 500;
+
+        span {
+          display: block;
+        }
+      }
+      dd > b {
         display: block;
       }
-    }
-    dd > b {
-      display: block;
-    }
 
-    &:last-child {
-      border: 0;
+      &:last-child {
+        border: 0;
+      }
     }
   }
 }
 
+// 프로젝트 영역
+
 .portfolio__project {
+  @include mix.inline-size(80%);
   @include mix.paddingY(3.125rem);
-  width: 80%;
   margin: 0 auto;
 
   h2 {
@@ -111,10 +116,11 @@ header {
     }
   }
 
+  // 칼리프로젝트
   &__karly {
     @include mix.margin-block-end(7.5rem);
     .karly__intro {
-      @include mix.flexbox($justify: center, $gap: 2.5rem, $items: center);
+      @include mix.flexbox($justify: space-between, $gap: 2.5rem, $items: center);
 
       img {
         @include mix.inline-size(40%);
@@ -122,23 +128,23 @@ header {
     }
 
     .karly__detail {
+      @include mix.flexbox($gap: 1rem);
       @include mix.marginY(2.5rem);
       position: relative;
 
       img {
-        width: 100%;
+        width: 80%;
         display: block;
-        margin: 0 auto;
         box-shadow: 1px 2px 3px 0 #9a9a9a;
         border-radius: 0.625rem;
       }
       &:before {
         content: "";
-        width: 1148px;
+        width: 80%;
         height: 5px;
         position: absolute;
         top: 0;
-        left: 26px;
+        left: 0;
         z-index: 1;
         background-color: #fff;
         border-radius: 0.625rem;
@@ -146,17 +152,38 @@ header {
 
       &--text {
         @include mix.marginY(1.25rem);
-        @include mix.padding-block-start(1.25rem);
-        @include mix.flexbox($justify: space-between, $gap: 1.25rem);
-        border-top: 1px solid #ddd;
+        @include mix.padding-inline-start(1.25rem);
+        @include mix.flexbox($direction: column, $justify: flex-start, $gap: 1.25rem);
+        border-left: 1px solid #ddd;
         line-height: 1.5;
         letter-spacing: -0.3px;
       }
     }
   }
-  .portfolio__intro {
-    @include mix.flexbox($direction: column, $justify: space-around);
 
+  // 토이프로젝트
+  &__toy {
+    @include mix.flexbox($gap: 2.5rem);
+
+    .toy__project {
+      @include mix.flexbox($gap: 1rem);
+
+      .jujeob {
+        @include mix.inline-size(80%);
+      }
+    }
+  }
+
+  // 각 프로젝트 discription
+  .portfolio__intro {
+    @include mix.inline-size(60%);
+    @include mix.flexbox($direction: column, $justify: flex-start, $gap: 1.25rem);
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      display: inline;
+    }
     p {
       line-height: 1.5;
       font-size: 1.125rem;
@@ -206,11 +233,7 @@ header {
     }
     &__desc {
       @include mix.flexbox($justify: space-between, $items: flex-end);
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 500;
-        display: inline;
-      }
+
       a {
         @include mix.padding-inline-start(1rem);
         text-align: right;
@@ -223,16 +246,14 @@ header {
       }
     }
   }
-  &__toy {
-    @include mix.flexbox($gap: 2.5rem);
-  }
 
+  // contact 영역
   .portfolio__contact {
     background-color: #08379c;
   }
 }
 
-/* 데스크탑 스타일 */
+// 데스크탑 스타일
 @media screen and (min-width: 768px) and (max-width: 1100px) {
   .portfolio__about {
     @include mix.flexbox($direction: column);
@@ -272,7 +293,7 @@ header {
       }
     }
     .toy__project {
-      @include mix.flexbox($direction: column);
+      @include mix.flexbox($direction: row);
 
       .jujeob {
         @include mix.inline-size(100%);
@@ -357,7 +378,7 @@ header {
       }
     }
     .toy__project {
-      @include mix.flexbox($direction: column);
+      @include mix.flexbox($direction: row);
 
       .jujeob {
         @include mix.inline-size(100%);
