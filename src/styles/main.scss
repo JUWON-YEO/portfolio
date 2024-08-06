@@ -115,51 +115,53 @@ header {
       background-color: #000;
     }
   }
+}
+// 칼리프로젝트
+&__karly {
+  @include mix.margin-block-end(7.5rem);
+  .karly__intro {
+    @include mix.flexbox($justify: center, $gap: 2.5rem, $items: flex-start);
 
-  // 칼리프로젝트
-  &__karly {
-    @include mix.margin-block-end(7.5rem);
-    .karly__intro {
-      @include mix.flexbox($justify: space-between, $gap: 2.5rem, $items: center);
-
-      img {
-        @include mix.inline-size(40%);
-      }
-    }
-
-    .karly__detail {
-      @include mix.flexbox($gap: 1rem);
-      @include mix.marginY(2.5rem);
-      position: relative;
-
-      img {
-        width: 80%;
-        display: block;
-        box-shadow: 1px 2px 3px 0 #9a9a9a;
-        border-radius: 0.625rem;
-      }
-      &:before {
-        content: "";
-        width: 80%;
-        height: 5px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background-color: #fff;
-        border-radius: 0.625rem;
-      }
-
-      &--text {
-        @include mix.marginY(1.25rem);
-        @include mix.padding-inline-start(1.25rem);
-        @include mix.flexbox($direction: column, $justify: flex-start, $gap: 1.25rem);
-        border-left: 1px solid #ddd;
-        line-height: 1.5;
-        letter-spacing: -0.3px;
-      }
+    img {
+      @include mix.inline-size(40%);
     }
   }
+
+  .karly__detail {
+    @include mix.flexbox($gap: 1rem);
+    @include mix.marginY(2.5rem);
+    position: relative;
+
+    img {
+      width: 80%;
+      display: block;
+      box-shadow: 1px 2px 3px 0 #9a9a9a;
+      border-radius: 0.625rem;
+    }
+    &:before {
+      content: "";
+      width: 80%;
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #fff;
+      border-radius: 0.625rem;
+    }
+
+    &--text {
+      @include mix.marginY(1.25rem);
+      @include mix.padding-inline-start(1.25rem);
+      @include mix.flexbox($direction: column, $justify: flex-start, $gap: 1.25rem);
+      border-left: 1px solid #ddd;
+      line-height: 1.5;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+.portfolio__intro {
+  @include mix.flexbox($direction: column, $justify: space-around, $gap: 1rem);
 
   // 토이프로젝트
   &__toy {
@@ -232,10 +234,13 @@ header {
       }
     }
     &__desc {
-      @include mix.flexbox($justify: space-between, $items: flex-end);
-
+      @include mix.flexbox($wrap: wrap, $justify: space-between, $items: flex-end);
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: inline;
+      }
       a {
-        @include mix.padding-inline-start(1rem);
         text-align: right;
         font-weight: 500;
         text-decoration: underline;
@@ -244,6 +249,14 @@ header {
           color: #f44336;
         }
       }
+    }
+  }
+  &__toy {
+    @include mix.flexbox($gap: 2.5rem);
+
+    .jujeob,
+    .randomDice {
+      min-height: 600px;
     }
   }
 

@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //min-height: 100vh;
   margin: 0;
   font: 1.3rem/1.5 "Pretendard", sans-serif;
   background: #151119;
@@ -139,10 +138,10 @@ hr {
   flex-flow: column;
   justify-content: center;
   position: relative;
-  max-width: 480px;
-  padding: 44px 60px 40px;
+  //max-width: 480px;
+  //padding: 44px 60px 40px;
   text-align: center;
-
+  border-radius: 10px;
   background-size: cover;
   transition: all 0.6s ease-in-out;
   gap: 24px;
@@ -160,9 +159,11 @@ hr {
 }
 
 .buttonGroup {
+  inline-size: 70%;
+  width: 70%;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 80px;
+  margin-bottom: 2.5rem;
   gap: 1px;
 }
 
@@ -201,15 +202,16 @@ hr {
   outline: none;
 }
 .recordListWrapper {
+  width: 70%;
   overflow: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  max-height: 240px;
+  max-height: 200px;
   border-radius: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.421);
   padding: 0 1rem 1rem;
-  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   background: #36506c3d;
   position: relative;
 }
@@ -267,7 +269,7 @@ hr {
 
 .recordList th,
 .recordList td {
-  padding: 0.6em 0.3em;
+  padding: 0.2em;
   color: #fff;
 }
 
