@@ -1,9 +1,6 @@
 import { diceAnimation } from "./diceAnimation.js";
 import { attr, getNode, getNodes, endScroll, insertLast, clearContents } from "kind-tiger";
 
-// 1. 주사위 애니메이션
-// 2. 주사위 굴리기 버튼을 클릭하면 diceAnimation() 실행될 수 있도록
-
 const [rollingButton, recordButton, resetButton] = getNodes(".buttonGroup > button");
 const recordListWrapper = getNode(".recordListWrapper");
 
@@ -22,17 +19,11 @@ function createItem(value) {
 }
 
 function renderRecordItem() {
-  // const diceValue = getNode('#cube').getAttribute('dice');
   const diceValue = Number(attr(getNode("#cube"), "dice"));
   console.log(diceValue);
 
   insertLast(".recordList tbody", createItem(diceValue));
 
-  // 1. insertLast 함수 사용
-
-  // 2. template 전달
-
-  // 3. diceValue interpolation(보간법) 하기 ex) <td>${diceValue}</td>
   endScroll(recordListWrapper);
 }
 
