@@ -1,16 +1,21 @@
 import "./src/styles/main.scss";
 import "./src/lib/jujeob.js";
 import "./src/lib/randomDice.js";
+import { getNode } from "kind-tiger";
+import gsap from "gsap";
 
-function documentLoad() {
-  const pageElement = document.querySelector("main");
-  const pageHeader = document.querySelector("header");
-  pageHeader.style.display = "none";
-  pageElement.style.display = "none";
+const prevButton = getNode(".previous__button");
+const cardList = document.querySelector(".portfolio__project__prev");
 
-  setTimeout(function () {
-    pageHeader.style.display = "flex";
-    pageElement.style.display = "block";
-  }, 100);
+let checked;
+function renderProjectCard() {
+  cardList.classList.toggle("is-active");
+
+  gsap.from(cardList, {
+    y: 30,
+    opacity: 0,
+    stagger: 0.1,
+  });
 }
-documentLoad();
+
+prevButton.addEventListener("click", renderProjectCard);

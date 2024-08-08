@@ -4,24 +4,24 @@
     <title>여주원 포트폴리오</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/main.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <header class="portfolio__header" style="display: none">
+    <header class="portfolio__header">
       <h1>
         <a href="/">사용자의 경험을 디자인하는 <b>웹 퍼블리셔</b></a>
       </h1>
       <ul>
-        <li>About Me</li>
-        <li>Career</li>
-        <li>Project</li>
-        <li>Contact</li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
-    <main style="display: none">
-      <section class="portfolio__about">
+    <main>
+      <section class="portfolio__about" id="about">
         <img srcset="/main_img_1x.webp 1x, /main_img_2x.webp 2x" src="/main_img_1x.webp" alt="여주원" />
         <div class="portfolio__about__dscr">
           <b>
@@ -42,7 +42,7 @@
           </p>
         </div>
       </section>
-      <section class="portfolio__career">
+      <section class="portfolio__career" id="career">
         <div class="portfolio__career__container">
           <h2>Career</h2>
           <dl>
@@ -81,7 +81,7 @@
           </dl>
         </div>
       </section>
-      <section class="portfolio__project">
+      <section class="portfolio__project" id="project">
         <h2>Project</h2>
         <div class="portfolio__project__karly">
           <div class="karly__intro">
@@ -126,11 +126,9 @@
             <div class="jujeob">
               <div class="alert alert-error">제대로된 이름을 입력해주세요 !</div>
               <div class="alert alert-success">클립보드에 복사 되었습니다 !</div>
-
               <div class="container">
                 <b>🤣 주접 생성기</b>
                 <p>주접 생성기를 통해 사랑을 전하세요</p>
-
                 <form>
                   <label for="nameField">이름을 적어주세요 <span class="icon">👇</span></label>
                   <input type="text" id="nameField" placeholder="이름을 작성해주세요" value="" />
@@ -141,12 +139,14 @@
               </div>
             </div>
             <div class="portfolio__intro jujeob__desc">
-              <h3>토이프로젝트 - 주접 생성기</h3>
-              <span>
-                <a href="https://github.com/JUWON-YEO/core-js/tree/04.jujeob" target="_blank" rel="noopener noreferrer">[GitHub]</a>
-              </span>
+              <div class="portfolio__intro__desc">
+                <h3>토이프로젝트 - 주접 생성기</h3>
+                <span>
+                  <a href="https://github.com/JUWON-YEO/core-js/tree/04.jujeob" target="_blank" rel="noopener noreferrer">[GitHub]</a>
+                </span>
+              </div>
               <p>온라인에서 인기있는 주접생성기를 모티브로 JavaScript로 간단한 주접생성기를 구현했습니다.</p>
-              <p>이름을 입력하면 저장된 데이터롤 이용해 주접을 랜덤으로 생성합니다. 공백과 숫자로 입력 할 경우는 에러 메세지를 보여줍니다. 버튼을 입력 후 출력던 주접을 클릭하면 클립보드로 복사가 기능합니다.</p>
+              <p>이름을 입력하면 저장된 데이터롤 이용해 주접을 랜덤으로 생성합니다. 공백과 숫자로 입력 할 경우는 에러 메세지를 보여줍니다. 버튼을 입력 후 출력된 주접을 클릭하면 클립보드로 복사가 기능합니다.</p>
             </div>
           </div>
           <div class="toy__project">
@@ -208,8 +208,39 @@
             </div>
           </div>
         </div>
+        <button class="previous__button" type="button">이전 프로젝트👇</button>
+        <div id="targetElement" class="portfolio__project__prev">
+          <figure class="card">
+            <a href="https://www.gayeon.com/main/main.asp" target="_blank" rel="noopener noreferrer"><img src="/gayeon.png" alt="가연결혼정보" /></a>
+            <figcaption>가연결혼정보</figcaption>
+          </figure>
+          <figure class="card">
+            <a href="http://www.kyndhotel.co.kr/" target="_blank" rel="noopener noreferrer"><img src="/kynd.png" alt="카인드호텔" /></a>
+            <figcaption>카인드호텔</figcaption>
+          </figure>
+          <figure class="card">
+            <a href="https://www.intomark.com/service/mai/main.wips" target="_blank" rel="noopener noreferrer"><img src="/intomark.png" alt="인투마크" /></a>
+            <figcaption>인투마크</figcaption>
+          </figure>
+          <figure class="card">
+            <a href="https://www.ipazon.co.kr/service/main.wips"><img src="/ipazon.png" alt="아이파즈온" target="_blank" rel="noopener noreferrer" /></a>
+            <figcaption>아이파즈온</figcaption>
+          </figure>
+        </div>
       </section>
-      <section class="portfolio__contact"></section>
+      <section class="portfolio__contact" id="contact">
+        <div>
+          <span
+            ><a href="mailto:juwon0481@gmail.com"><img src="/gmail-icon.svg" alt="여주원 이메일 링크" /></a
+          ></span>
+          <span
+            ><a href="https://github.com/JUWON-YEO" target="_blank" rel="noopener noreferrer"><img src="/github.svg" alt="여주원 깃허브 링크" /></a
+          ></span>
+        </div>
+      </section>
     </main>
+    <footer>
+      <p>copyright &copy; 2024 yeo ju won portfolio. All rights reserved</p>
+    </footer>
   </body>
 </html>
